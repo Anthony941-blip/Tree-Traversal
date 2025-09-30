@@ -19,5 +19,11 @@ int main() {
 	inorder(root);
 	cout << "\n";
 
+        cout << "Pre-order: ";
+        preOrder(root);
+        cout << "\n";
+
+
+
 	return 0;
 }
