@@ -14,6 +14,7 @@ struct BinaryTreeNode {
 };
 
 void postorder(BinaryTreeNode* root);
+void levelOrder(BinaryTreeNode* root);
 
 int main() {
 
@@ -29,3 +30,21 @@ void postorder(BinaryTreeNode* root) {
         cout << root->data << " ";
 }
 
+void levelOrder(BinaryTreeNode* root) {
+	if(root == nullptr) {
+		return;
+	}
+	queue<BinaryTreeNode*> q;
+	q.push(root);
+	while(q!empty()) {
+		BinaryTreeNode* current = q.front();
+		q.pop();
+		cout << current->data <<  " ";
+		if(current->data) {
+		q.push(current->left);
+	}
+		if(current->right) {
+		q.push(current->right);
+	}
+	}
+}
