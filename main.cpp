@@ -1,4 +1,5 @@
 #include <iostream>
+#include <queue>
 using namespace std;
 
 struct BinaryTreeNode {
@@ -15,8 +16,17 @@ struct BinaryTreeNode {
 
 void postorder(BinaryTreeNode* root);
 void levelOrder(BinaryTreeNode* root);
+void freeTree(BinaryTreeNode* root);
 
 int main() {
+
+	BinaryTreeNode* root = new BinaryTreeNode("A");
+	root->left = new BinaryTreeNode("B");
+	root->right = new BinaryTreeNode("C");
+	root->left->left = new BinaryTreeNode("D");
+	root->left->right = new BinaryTreeNode("E");
+	root->right->left = new BinaryTreeNode("F");
+
 
 	return 0;
 }
@@ -47,4 +57,13 @@ void levelOrder(BinaryTreeNode* root) {
 		q.push(current->right);
 	}
 	}
+}
+
+void freeTree(BinaryTreeNode* root) {
+	if(!root) {
+		return;
+	}
+	freeTree(root->left);
+	freeTree(roovoid freeTree(BinaryTreeNode* root) t->right);
+	delete root;
 }
