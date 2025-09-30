@@ -16,7 +16,8 @@ struct BinaryTreeNode {
 int main() {
 
 	cout << "In-order: ";
-
+	inorder(root);
+	cout << "\n";
 
 	return 0;
 }
