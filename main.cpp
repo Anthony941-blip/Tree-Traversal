@@ -23,6 +23,15 @@ int main() {
         preOrder(root);
         cout << "\n";
 
+        cout << "Post-order: ";
+        postorder(root);
+        cout << "\n";
+
+        cout << "Level-order: ";
+        levelorder(root);
+        cout << "\n";
+
+	freeTree(root);
 
 
 	return 0;
