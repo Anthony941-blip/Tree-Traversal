@@ -14,18 +14,11 @@ struct BinaryTreeNode {
 };
 
 
-void inorder(BinaryTreeNode* root);
 
-
-int main() {
-
-
-
-	return 0;
-}
+void postorder(BinaryTreeNode* root);
 
 void inorder(BinaryTreeNode* root) { 
-=======
+
 void preOrder(BinaryTreeNode* root);
 
 int main() {
@@ -55,18 +48,28 @@ int main() {
 
 void preOrder(BinaryTreeNode* root) { 
 
->>>>>>> feature-pre-order
         if(root == nullptr) { 
                 return;
         }
 
-<<<<<<< HEAD
+
         inorder(root->left);
         cout << root->data << " ";
         inorder(root->right);
-=======
+
         cout << root->data << " ";
         preOrder(root->left);
         preOrder(root->right);
->>>>>>> feature-pre-order
+
 }
+
+void postorder(BinaryTreeNode* root) { 
+        if(root == nullptr) { 
+                return;
+        }
+        postorder(root->left);
+        postorder(root->right);
+        cout << root->data << " ";
+}
+
+
