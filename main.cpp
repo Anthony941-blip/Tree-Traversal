@@ -7,7 +7,7 @@ struct BinaryTreeNode {
 	BinaryTreeNode* left;
 	BinaryTreeNode* right;
 
-	BinaryTreeNode(cinst string& value) {
+	BinaryTreeNode(const string& value) {
 		data = value;
 		left = nullptr;
 		right = nullptr;
